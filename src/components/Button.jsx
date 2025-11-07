@@ -1,4 +1,3 @@
-
 export default function Button({ onClick, disabled, children, variant = "primary", className = "" }) {
   const baseStyles = "py-3 px-6 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]";
   

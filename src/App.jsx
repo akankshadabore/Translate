@@ -13,7 +13,7 @@ export default function App() {
   const [translatedText, setTranslatedText] = useState("");
   const [sourceLang, setSourceLang] = useState("auto"); 
   const [targetLang, setTargetLang] = useState("hi");   
-  const [copied, setCopied] = useState(false); // state for copy tooltip
+  const [copied, setCopied] = useState(false); 
 
   const { translateText, loading, error } = useTranslate();
 
@@ -66,11 +66,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4">
-      <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl p-8 space-y-6 border border-gray-100">
+    <div className="min-h-screen flex items-center justify-center md:bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-4">
+      <div className="md:w-full md:max-w-4xl md:bg-white md:rounded-3xl md:shadow-2xl md:p-8 space-y-6 md:border border-gray-100">
       
         <div className="text-center space-y-2">
-          <h1 className="text-4xl font-bold text-indigo-500">
+          <h1 className="text-2xl md:text-4xl font-bold text-indigo-500">
              Universal AI Translator
           </h1>
           <p className="text-gray-600">Translate between any languages with AI power</p>
@@ -137,7 +137,7 @@ export default function App() {
                         onClick={() => {
                           navigator.clipboard.writeText(translatedText);
                           setCopied(true);
-                          setTimeout(() => setCopied(false), 1500); // hide after 1.5s
+                          setTimeout(() => setCopied(false), 1500); 
                         }}
                         className="text-green-600 hover:text-green-800 text-sm font-medium hover:underline"
                         title="Copy to clipboard"
